@@ -1,0 +1,37 @@
+{
+  "name": "@philippdormann/normalize-email",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "normalize emails for uniqueness validation",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "email",
+    "normalize",
+    "gmail",
+    "googlemail",
+    "hotmail",
+    "live",
+    "outlook"
+  ],
+  "author": {
+    "name": "Philipp Dormann"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
+}
